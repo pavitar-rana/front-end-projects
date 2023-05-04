@@ -1,0 +1,385 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Periodic table</title>
+    <style>
+      body {
+        font-family: sans-serif;
+      }
+      .blue-box {
+        display: flex;
+        margin: 5px;
+      }
+      .blue-box > div {
+        margin: 5px;
+        height: 50px;
+        width: 50px;
+        border: 2px solid black;
+        background-color: blue;
+      }
+      .middle-flex {
+        display: flex;
+        flex-direction: column;
+      }
+      .same-size {
+        font-size: 19px;
+      }
+      .si-box {
+        width: 150px;
+        height: 150px;
+        background-color: #89a02c;
+        border: 2px solid black;
+      }
+      .right-sc {
+        text-align: right;
+      }
+      .si-si {
+        font-family: sans-serif;
+        padding-left: 5%;
+        font-size: 60px;
+        margin-bottom: -10px;
+        margin-top: -10px;
+        font-weight: lighter;
+      }
+      .same-size {
+        margin: 10px;
+      }
+      .startflex {
+        display: flex;
+        flex-direction: row;
+      }
+      .m1 {
+        display: flex;
+        flex-direction: column;
+      }
+      .m1 > div {
+        margin: 5px;
+        height: 50px;
+        width: 50px;
+        border: 2px solid black;
+        background-color: #89a02c;
+      }
+      .m1 :nth-child(1) {
+        background-color: #aa0203;
+      }
+      .textH {
+        font-weight: bold;
+        font-size: 20px;
+        color: white;
+        text-align: center;
+        /* padding: 1px; */
+      }
+      .m2 {
+        display: flex;
+        flex-direction: column-reverse;
+        /* margin-bottom: 5px; */
+      }
+      .m2 > div {
+        margin: 5px;
+        height: 50px;
+        width: 50px;
+        border: 2px solid black;
+        background-color: #fc5454;
+      }
+      .m2 > div > p {
+        text-align: center;
+        font-weight: bold;
+      }
+      .m3 {
+        display: flex;
+        flex-direction: column-reverse;
+      }
+      .m3 > div {
+        margin: 5px;
+        height: 50px;
+        width: 50px;
+        border: 5px solid black;
+      }
+      #mainbox {
+        display: flex;
+        flex-direction: row;
+        justify-content: center;
+      }
+      .lastflex {
+        display: flex;
+        flex-direction: row;
+      }
+      .samesix > div {
+        margin: 5px;
+        height: 50px;
+        width: 50px;
+        border: 2px solid black;
+      }
+      .seven > div {
+        margin: 5px;
+        height: 50px;
+        width: 50px;
+        border: 2px solid black;
+        background-color: #ffcc00;
+      }
+      .seven :nth-child(1) {
+        background-color: #6d535e;
+      }
+      .l5 > div {
+        background-color: #fc5454;
+      }
+      .l5 :nth-child(1) {
+        background-color: #6d535e;
+      }
+      .l4 :nth-child(1) {
+        background-color: #6d535e;
+      }
+      .l3 :nth-child(1) {
+        background-color: #6d535e;
+      }
+      .l2 :nth-child(1) {
+        background-color: #6d535e;
+      }
+      .l1 :nth-child(1) {
+        background-color: #6d535e;
+      }
+      .l1 > div {
+        background-color: #ff6600;
+      }
+      .l1 :nth-last-child(1) {
+        background-color: #aa0087;
+      }
+      .l2 :nth-last-child(1) {
+        background-color: #89a02c;
+      }
+      .l3 :nth-last-child(1) {
+        background-color: #89a02c;
+      }
+      .l3 :nth-last-child(2) {
+        background-color: #89a02c;
+      }
+      .l4 :nth-last-child(1) {
+        background-color: #89a02c;
+      }
+      .l4 :nth-last-child(3) {
+        background-color: #89a02c;
+      }
+      .l4 :nth-last-child(2) {
+        background-color: #89a02c;
+      }
+      .samesix,
+      .seven {
+        display: flex;
+        flex-direction: column-reverse;
+      }
+      .purple {
+        background-color: #aa0087;
+      }
+      .orange {
+        background-color: #ff6600;
+      }
+      .bottom {
+        display: flex;
+        flex-direction: column;
+        text-align: center;
+      }
+      .btop > div {
+        width: 40px;
+        height: 40px;
+        border: 1px solid #5d5335;
+      }
+      .bbottom > div {
+        width: 40px;
+        height: 40px;
+        border: 1px solid #5d5335;
+      }
+      .btop,
+      .bbottom {
+        display: flex;
+        flex-direction: row;
+      }
+      .centerdiv {
+        display: flex;
+        justify-content: center;
+        margin-top: 4%;
+      }
+      .whitetxt {
+        color: white;
+      }
+      .btop {
+        background-color: #627a3f;
+      }
+      .bbottom {
+        background-color: #95bc5f;
+      }
+    </style>
+  </head>
+  <body>
+    <center>
+      <h1>The Periodic table of elements</h1>
+    </center>
+    <div id="mainbox">
+      <div class="startflex">
+        <div class="m1">
+          <div><p class="textH">H</p></div>
+          <div></div>
+          <div></div>
+          <div></div>
+          <div></div>
+          <div></div>
+          <div></div>
+        </div>
+        <div class="m2">
+          <div><p>88</p></div>
+          <div><p>56</p></div>
+          <div><p>38</p></div>
+          <div><p>38</p></div>
+          <div><p>12</p></div>
+          <div><p>4</p></div>
+        </div>
+        <div class="m3">
+          <div></div>
+          <div></div>
+        </div>
+      </div>
+      <div class="middle-flex">
+        <div class="sisection">
+          <div class="si-box">
+            <p class="same-size right-sc" style="margin: 10px">14</p>
+            <h3 class="si-si">Si</h3>
+            <p class="same-size">Silicon</p>
+          </div>
+        </div>
+        <div class="blue-box">
+          <div></div>
+          <div></div>
+          <div></div>
+          <div></div>
+          <div></div>
+          <div></div>
+          <div></div>
+          <div></div>
+          <div></div>
+        </div>
+        <div class="blue-box">
+          <div></div>
+          <div></div>
+          <div></div>
+          <div></div>
+          <div></div>
+          <div></div>
+          <div></div>
+          <div></div>
+          <div></div>
+        </div>
+        <div class="blue-box">
+          <div></div>
+          <div></div>
+          <div></div>
+          <div></div>
+          <div></div>
+          <div></div>
+          <div></div>
+          <div></div>
+          <div></div>
+        </div>
+        <div class="blue-box">
+          <div></div>
+          <div></div>
+          <div></div>
+          <div></div>
+          <div></div>
+          <div></div>
+          <div></div>
+          <div></div>
+          <div></div>
+        </div>
+      </div>
+      <div class="lastflex">
+        <div class="samesix l1">
+          <div></div>
+          <div></div>
+          <div></div>
+          <div></div>
+          <div></div>
+          <div></div>
+        </div>
+        <div class="samesix l2">
+          <div></div>
+          <div class="orange"></div>
+          <div class="orange"></div>
+          <div class="purple"></div>
+          <div class="purple"></div>
+          <div></div>
+        </div>
+        <div class="samesix l3">
+          <div></div>
+          <div class="orange"></div>
+          <div class="purple"></div>
+          <div class="purple"></div>
+          <div></div>
+          <div></div>
+        </div>
+        <div class="samesix l4">
+          <div></div>
+          <div class="purple"></div>
+          <div class="purple"></div>
+          <div></div>
+          <div></div>
+          <div></div>
+        </div>
+        <div class="samesix l5">
+          <div></div>
+          <div></div>
+          <div></div>
+          <div></div>
+          <div></div>
+          <div></div>
+        </div>
+        <div class="seven">
+          <div></div>
+          <div></div>
+          <div></div>
+          <div></div>
+          <div></div>
+          <div></div>
+          <div></div>
+        </div>
+      </div>
+    </div>
+    <div class="centerdiv">
+      <div class="bottom">
+        <div class="btop">
+          <div><p class="whitetxt">La</p></div>
+          <div></div>
+          <div></div>
+          <div></div>
+          <div></div>
+          <div></div>
+          <div></div>
+          <div></div>
+          <div></div>
+          <div></div>
+          <div></div>
+          <div></div>
+          <div></div>
+          <div></div>
+        </div>
+        <div class="bbottom">
+          <div></div>
+          <div></div>
+          <div></div>
+          <div></div>
+          <div></div>
+          <div></div>
+          <div><p>Am</p></div>
+          <div></div>
+          <div></div>
+          <div></div>
+          <div></div>
+          <div></div>
+          <div></div>
+          <div><p>No</p></div>
+        </div>
+      </div>
+    </div>
+  </body>
+</html>
