@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <style>
+      body {
+        font-family: sans-serif;
+      }
+      #main {
+        display: flex;
+        width: 100%;
+        justify-content: center;
+      }
+      #container {
+        display: flex;
+        flex-direction: row;
+        justify-content: space-between;
+        width: 90%;
+        align-items: center;
+        height: 55px;
+        border-radius: 10px;
+        background-color: #1c2938;
+        color: white;
+        padding: 10px;
+        margin-top: 50px;
+      }
+      #deep {
+        display: flex;
+        flex-direction: row;
+        justify-content: space-around;
+        width: 28%;
+      }
+      #deep > div {
+        /* margin-right: 15%; */
+      }
+      select {
+        background-color: #1c2938;
+        color: white;
+        border: none;
+      }
+      #container :nth-child(1) {
+        padding-left: 1%;
+      }
+    </style>
+  </head>
+  <body>
+    <div id="main">
+      <div id="container">
+        <h3>MEGAWIDTH</h3>
+        <div id="deep">
+          <div>Home</div>
+          <div>About</div>
+          <div>Blog</div>
+          <select name="" id="">
+            <option value="">Page</option>
+            <option value="">Anything</option>
+            <option value="">Hello</option>
+          </select>
+        </div>
+      </div>
+    </div>
+  </body>
+</html>
