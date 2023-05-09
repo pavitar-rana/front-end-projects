@@ -1,0 +1,44 @@
+* {
+  font-family: sans-serif;
+}
+input {
+  margin-bottom: 8%;
+  border: 1px solid gray;
+  padding: 7px;
+  border-radius: 2px;
+}
+#signup-form-div {
+  display: flex;
+  flex-direction: column;
+  border-radius: 10px;
+  box-shadow: rgba(0, 0, 0, 0.4) 0px 10px 20px, rgba(0, 0, 0, 0.3) 0px 6px 6px;
+  width: 27%;
+  align-items: center;
+}
+#container {
+  display: flex;
+  /* flex-direction: column; */
+  justify-content: center;
+  margin-top: 5%;
+  /* align-items: center; */
+}
+#signup-form-div > h1 {
+  margin-top: 3%;
+}
+#subbtn {
+  background-color: #008080;
+  color: white;
+  width: 55%;
+  border-radius: 4px;
+  height: 30px;
+}
+#topbar {
+  display: flex;
+  flex-direction: row;
+  justify-content: right;
+  border: 2px solid black;
+}
+#topbar > div {
+  margin: 15px;
+  font-weight: bolder;
+}

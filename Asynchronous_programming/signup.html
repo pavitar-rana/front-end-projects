@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Sign Up</title>
+  </head>
+  <body>
+    <form onsubmit="signup(event)" id="myform" action="">
+      <label for="">Name</label>
+      <input type="text" name="" id="name" /><br />
+      <label for="">Email</label>
+      <input type="email" name="" id="email" /><br />
+      <label for="">Password</label>
+      <input type="password" name="" id="password" /><br />
+      <input type="submit" value="signup" />
+    </form>
+  </body>
+</html>
+
+<script>
+  function signup(e) {
+    e.preventDefault();
+    let myform = document.getElementById("myform");
+    let name = myform.name.value;
+    let email = myform.email.value;
+    let password = myform.password.value;
+
+    //     let obj = {}
+    //     obj.Name = name;
+    //     obj.Email = email;
+    //     obj.Password = password;
+    //     let data = JSON.stringify(obj)
+    //     arr.push(data);
+    //     localStorage.setItem(arr)
+    if (localStorage.getItem("users") === null) {
+      localStorage.setItem("users", JSON.stringify([]));
+    }
+    let users = {
+      name,
+      email,
+      password,
+    };
+    let arr = JSON.parse(localStorage.getItem('users'))
+    arr.push(users)
+    localStorage.setItem('users',JSON.stringify(arr))
+  }
+</script>

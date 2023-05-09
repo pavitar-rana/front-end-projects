@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Sign In</title>
+  </head>
+  <body>
+    <form id="myform" onsubmit="signup(event)" action="">
+      <label for="">Email</label>
+      <input type="email" name="" id="email" /><br />
+      <label for="">Password</label>
+      <input type="password" name="" id="password" /><br />
+      <input type="submit" />
+    </form>
+  </body>
+</html>
+<script>
+  function signup(e) {
+    e.preventDefault();
+    let myform = document.getElementById("myform");
+    let email = myform.email.value;
+    let password = myform.password.value;
+
+    let all_users = JSON.parse(localStorage.getItem("users"));
+    console.log(all_users);
+
+    all_users.forEach(function (user) {
+      if (email === user.email && password === user.password) {
+        // alert("Login successful");
+        window.location.href = "index.html";
+      }
+      console.log(user.name, user.email, user.password);
+    });
+  }
+</script>
