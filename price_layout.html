@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <style>
+      #dgrid {
+        display: grid;
+        grid-template-columns: repeat(3, 1fr);
+        width: 70%;
+        margin: auto;
+        margin-top: 80px;
+        gap: 20px;
+      }
+      #dgrid > div {
+        text-align: center;
+        align-items: center;
+        padding: 10px;
+        box-shadow: rgba(0, 0, 0, 0.16) 0px 2px 5px;
+      }
+      p {
+        text-align: center;
+      }
+      h1 {
+        text-align: center;
+      }
+      #uppersection {
+        width: 50%;
+        margin: auto;
+      }
+      #uppersection > p {
+        margin-top: 5px;
+      }
+      p + p {
+        margin-top: 0;
+      }
+      button {
+        padding: 10px;
+        width: 160px;
+        border-radius: 10px;
+      }
+      #b1,
+      #b3 {
+        border: 1px solid #007aff;
+        color: #007aff;
+        background-color: white;
+      }
+      #b2 {
+        border: none;
+        color: white;
+        background-color: #007aff;
+      }
+      #green {
+        color: #09ab78;
+      }
+      #red {
+        color: #f27e42;
+      }
+      #blue {
+        color: #65a7f4;
+      }
+    </style>
+  </head>
+  <body>
+    <div>
+      <div id="uppersection">
+        <h1>Choose a plan that right for your business</h1>
+        <p>
+          We coollect reviews from our users so you can get an honest opinion of
+          what an experience with our website are raally like!
+        </p>
+      </div>
+      <div id="dgrid">
+        <div>
+          <h3>Starter plan</h3>
+          <h1 id="green">Free</h1>
+          <p>Per month</p>
+          <p>
+            We collect reviews from our users so you can get an honest opinion
+            of what an experience with our website.
+          </p>
+          <button id="b1">Start Now</button>
+        </div>
+        <div>
+          <h3>Business Plan</h3>
+          <h1 id="red">$39.00</h1>
+          <p>Per month</p>
+          <p>
+            We collect reviews from our users so you can get an honest opinion
+            of what an experience with our website.
+          </p>
+          <button id="b2">Start Now</button>
+        </div>
+        <div>
+          <h3>Premium Plan</h3>
+          <h1 id="blue">$59.00</h1>
+          <p>Per month</p>
+          <p>
+            We collect raviaws from our users so you can get an honest opinion
+            of what an experience with our website
+          </p>
+          <button id="b3">Start Now</button>
+        </div>
+      </div>
+    </div>
+  </body>
+</html>
