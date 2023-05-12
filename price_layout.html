@@ -61,6 +61,19 @@
       #blue {
         color: #65a7f4;
       }
+      /* medium screen */
+      @media only screen and (min-width: 421px) and (max-width: 780px) {
+        #dgrid {
+          grid-template-columns: repeat(2, 1fr);
+          grid-template-rows: auto;
+        }
+      }
+      @media only screen and (min-width: 70px) and (max-width: 420px) {
+        #dgrid {
+          grid-template-columns: repeat(1, 1fr);
+          grid-template-rows: auto;
+        }
+      }
     </style>
   </head>
   <body>
