@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <style>
+      body {
+        font-family: sans-serif;
+      }
+      #dgrid {
+        display: grid;
+        grid-template-columns: repeat(4, 1fr);
+        grid-template-rows: 160px;
+        gap: 25px;
+      }
+      #b1 {
+        background-color: red;
+        padding: 20px;
+      }
+      #b2 {
+        background-color: limegreen;
+        padding: 20px;
+      }
+      #b3 {
+        background-color: #5763ee;
+        padding: 20px;
+      }
+      #b4 {
+        background-color: grey;
+        padding: 20px;
+      }
+      h1 {
+        background-color: yellow;
+        padding: 10px;
+      }
+      /* medium screen */
+      @media only screen and (min-width: 421px) and (max-width: 780px) {
+        #dgrid {
+          grid-template-columns: repeat(2, 1fr);
+          grid-template-rows: 160px 160px;
+        }
+      }
+      @media only screen and (min-width: 70px) and (max-width: 420px) {
+        #dgrid {
+          grid-template-columns: repeat(1, 1fr);
+          grid-template-rows: 160px 160px 160px 160px;
+        }
+      }
+    </style>
+  </head>
+  <body>
+    <div>
+      <div id="nav"><h1>Navigation</h1></div>
+      <div id="dgrid">
+        <div id="b1">Box 1</div>
+        <div id="b2">Box 2</div>
+        <div id="b3">Box 3</div>
+        <div id="b4">Box 4</div>
+      </div>
+    </div>
+  </body>
+</html>
