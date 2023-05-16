@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <input type="number" name="" id="first" />
+    <input type="number" name="" id="second" />
+    <button id="mt" onclick="mt()">Multiply</button>
+    <button id="cal" onclick="calc()">Click here to find the exponent!</button>
+
+    <p id="result"></p>
+  </body>
+  <script>
+    function mt() {
+      let n1 = document.getElementById("first").value;
+      let n2 = document.getElementById("second").value;
+      let res = eval(n1* n2);
+      alert(res);
+    }
+    function calc() {
+      let n1 = document.getElementById("first").value;
+      let n2 = document.getElementById("second").value;
+      let result = 1;
+      for (let i = 0; i < n2; i++) {
+        result *= n1;
+      }
+      document.getElementById("result").innerText = result;
+    }
+  </script>
+</html>
