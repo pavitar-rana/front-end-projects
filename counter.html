@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Counter</title>
+  </head>
+  <body>
+    <h1 id="result"></h1>
+    <button id="increase">Increase</button>
+    <button id="decrease">Decrease</button>
+    <script>
+      if (localStorage.getItem("ct") === null) {
+        localStorage.setItem("ct", JSON.stringify([]));
+      }
+      var Counter = JSON.parse(localStorage.getItem("ct"));
+      document.getElementById("result").textContent = Counter;
+
+      document.getElementById("increase").addEventListener("click", () => {
+        if (localStorage.getItem("ct") === null) {
+          localStorage.setItem("ct", JSON.stringify([]));
+        } else {
+          var Counter = JSON.parse(localStorage.getItem("ct"));
+          Counter++;
+          document.getElementById("result").textContent = Counter;
+          localStorage.setItem("ct", JSON.stringify(Counter));
+        }
+      });
+      document.getElementById("decrease").addEventListener("click", () => {
+        if (localStorage.getItem("ct") === null) {
+          localStorage.setItem("ct", JSON.stringify([]));
+        } else {
+          var Counter = JSON.parse(localStorage.getItem("ct"));
+          Counter--;
+          document.getElementById("result").textContent = Counter;
+          localStorage.setItem("ct", JSON.stringify(Counter));
+        }
+      });
+    </script>
+  </body>
+</html>
