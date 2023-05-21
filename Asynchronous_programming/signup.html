@@ -27,13 +27,6 @@
     let email = myform.email.value;
     let password = myform.password.value;
 
-    //     let obj = {}
-    //     obj.Name = name;
-    //     obj.Email = email;
-    //     obj.Password = password;
-    //     let data = JSON.stringify(obj)
-    //     arr.push(data);
-    //     localStorage.setItem(arr)
     if (localStorage.getItem("users") === null) {
       localStorage.setItem("users", JSON.stringify([]));
     }
@@ -42,8 +35,8 @@
       email,
       password,
     };
-    let arr = JSON.parse(localStorage.getItem('users'))
-    arr.push(users)
-    localStorage.setItem('users',JSON.stringify(arr))
+    let arr = JSON.parse(localStorage.getItem("users"));
+    arr.push(users);
+    localStorage.setItem("users", JSON.stringify(arr));
   }
 </script>

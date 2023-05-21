@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Sign Up</title>
+    <link rel="stylesheet" href="Styles/signup.css" />
+  </head>
+  <body>
+    <div id="upperbar">
+      <a class="up" href="signup.html">Signup</a>
+      <a class="up" href="signin.html">Login</a>
+      <a class="up" href="">Men</a>
+      <a class="up" href="">Women</a>
+    </div>
+    <div id="main">
+      <h1>Create Account</h1>
+      <div id="form">
+        <form onsubmit="signup(event)" id="myform" action="">
+          <div id="em">
+            <label for="">Email</label><br />
+            <input type="email" name="" required id="email" /><br />
+          </div>
+          <div id="lable">
+            <label for="">Mobile Number</label><br />
+            <input
+              type="tel"
+              name=""
+              placeholder="Mobile Number"
+              required
+              id="phn"
+            /><br />
+          </div>
+          <div id="pass">
+            <label for="">Password</label><br />
+            <input
+              type="password"
+              placeholder="At least 6 characters"
+              required
+              name=""
+              id="password"
+            /><br />
+          </div>
+
+          <input type="submit" id="btn" value="Signup" /><br />
+        </form>
+        <a href="signin.html" id="lmsg"></a>
+      </div>
+    </div>
+  </body>
+</html>
+
+<script>
+  function signup(e) {
+    e.preventDefault();
+    let myform = document.getElementById("myform");
+    let email = myform.email.value;
+    let phn = myform.phn.value;
+    let password = myform.password.value;
+
+    if (localStorage.getItem("users") === null) {
+      localStorage.setItem("users", JSON.stringify([]));
+    }
+    let users = {
+      email,
+      phn,
+      password,
+    };
+    let arr = JSON.parse(localStorage.getItem("users"));
+    arr.push(users);
+    localStorage.setItem("users", JSON.stringify(arr));
+    document.getElementById("lmsg").textContent = "Click here to login!";
+  }
+</script>

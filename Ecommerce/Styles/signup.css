@@ -1,0 +1,70 @@
+* {
+  box-sizing: border-box;
+}
+body {
+  font-family: sans-serif;
+  font-size: 13px;
+  line-height: 19px;
+  color: #111;
+}
+#main {
+  display: flex;
+  flex-direction: column;
+  width: 350px;
+  margin: auto;
+  margin-top: 100px;
+  margin-bottom: auto;
+  padding: 14px 18px;
+  border: 1px solid #ddd;
+}
+h1 {
+  font-weight: 400;
+  font-size: 28px;
+}
+label {
+  display: block;
+  block-size: 3px;
+  padding-left: 2px;
+  padding-bottom: 2px;
+  font-weight: 700;
+}
+#em,
+#lable,
+#pass {
+  margin-bottom: 14px;
+}
+
+input {
+  border: 1px solid #a6a6a6;
+  border-top-color: #949494;
+  height: 31px;
+  border-radius: 4px;
+  width: 90%;
+  padding: 3px 7px;
+}
+#btn {
+  background: #f0c14b;
+  border-color: #a88734 #9c7e31 #846a29;
+}
+#lmsg {
+  font-size: 13px;
+  font-weight: 500;
+  color: #111;
+  text-decoration: underline;
+  margin-top: 10px;
+}
+#upperbar {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  margin: auto;
+  margin-top: 10px;
+  background-color: #023070;
+  padding: 10px;
+  padding-left: 20px;
+  padding-right: 20px;
+}
+.up {
+  color: #fff;
+  font-size: 15px;
+}
